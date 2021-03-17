@@ -10,6 +10,9 @@ import SwiftUI
 final class HomeViewModel: ObservableObject {
     
     @Published private(set) var cards = Card.cards
+    @Published private(set) var removalTransition = AnyTransition.trailingBottom
+    
+    private let dragThreshold: CGFloat = 80.0
     
     func updatePositionOf(card: Card, using value: DragGesture.Value) {
         guard isTop(card: card) else { return }
@@ -19,22 +22,27 @@ final class HomeViewModel: ObservableObject {
         let angleRotation = Double(7 * (value.translation.width > 0 ? 1 : -1))
         
         findAndMutate(card, x: xPosition, y: yPosititon, angle: angleRotation)
+        setRemovalTransition(using: xPosition)
     }
     
     func shouldRemove(card: Card, using value: DragGesture.Value) {
         guard isTop(card: card) else { return }
+
+        let xPosition = value.translation.width
         
-        switch value.translation.width {
-        case 0...100:
+        if xPosition < -dragThreshold || xPosition > dragThreshold {
             cards.removeLast()
-        case let x where x > 100:
-            cards.removeLast()
-        case (-100)...(-1):
-            cards.removeLast()
-        case let x where x < -100:
-            cards.removeLast()
-        default:
-            cards.removeLast()
+        } else {
+            findAndMutate(card, x: 0.0, y: 0.0, angle: 0.0)
+        }
+    }
+    
+    func setRemovalTransition(using xPosition: CGFloat) {
+        if xPosition < -dragThreshold {
+            removalTransition = .leadingBottom
+        }
+        if xPosition > dragThreshold {
+            removalTransition = .trailingBottom
         }
     }
     

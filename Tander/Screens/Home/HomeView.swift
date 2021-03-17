@@ -19,17 +19,15 @@ struct HomeView: View {
             ZStack {
                 ForEach(viewModel.cards) { card in
                     CardView(card: card)
+                        .animation(.interpolatingSpring(stiffness: 180, damping: 100))
+                        .transition(viewModel.removalTransition)
                         .gesture(
                             DragGesture()
                                 .onChanged { value in
-                                    withAnimation {
-                                        viewModel.updatePositionOf(card: card, using: value)
-                                    }
+                                    viewModel.updatePositionOf(card: card, using: value)
                                 }
                                 .onEnded { value in
-                                    withAnimation(.interpolatingSpring(mass: 1.0, stiffness: 50, damping: 8, initialVelocity: 0)) {
-                                        viewModel.shouldRemove(card: card, using: value)
-                                    }
+                                    viewModel.shouldRemove(card: card, using: value)
                                 }
                         )
                 }
