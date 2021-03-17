@@ -8,18 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		D21FA3912602174B00A5D37F /* TanderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21FA3902602174B00A5D37F /* TanderApp.swift */; };
-		D21FA3932602174B00A5D37F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21FA3922602174B00A5D37F /* ContentView.swift */; };
 		D21FA3952602174E00A5D37F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D21FA3942602174E00A5D37F /* Assets.xcassets */; };
 		D21FA3982602174E00A5D37F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D21FA3972602174E00A5D37F /* Preview Assets.xcassets */; };
+		D21FA3A2260217E200A5D37F /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21FA3A1260217E200A5D37F /* Card.swift */; };
+		D21FA3A7260219A800A5D37F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21FA3A6260219A800A5D37F /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D21FA38D2602174B00A5D37F /* Tander.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tander.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D21FA3902602174B00A5D37F /* TanderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TanderApp.swift; sourceTree = "<group>"; };
-		D21FA3922602174B00A5D37F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D21FA3942602174E00A5D37F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D21FA3972602174E00A5D37F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D21FA3992602174E00A5D37F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D21FA3A1260217E200A5D37F /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		D21FA3A6260219A800A5D37F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +54,9 @@
 		D21FA38F2602174B00A5D37F /* Tander */ = {
 			isa = PBXGroup;
 			children = (
+				D21FA3A0260217CC00A5D37F /* Models */,
+				D21FA3A52602198200A5D37F /* Screens */,
 				D21FA3902602174B00A5D37F /* TanderApp.swift */,
-				D21FA3922602174B00A5D37F /* ContentView.swift */,
 				D21FA3942602174E00A5D37F /* Assets.xcassets */,
 				D21FA3992602174E00A5D37F /* Info.plist */,
 				D21FA3962602174E00A5D37F /* Preview Content */,
@@ -67,6 +70,22 @@
 				D21FA3972602174E00A5D37F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D21FA3A0260217CC00A5D37F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D21FA3A1260217E200A5D37F /* Card.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D21FA3A52602198200A5D37F /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				D21FA3A6260219A800A5D37F /* HomeView.swift */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +157,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D21FA3932602174B00A5D37F /* ContentView.swift in Sources */,
+				D21FA3A7260219A800A5D37F /* HomeView.swift in Sources */,
+				D21FA3A2260217E200A5D37F /* Card.swift in Sources */,
 				D21FA3912602174B00A5D37F /* TanderApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
