@@ -32,6 +32,7 @@ struct HomeView: View {
                         )
                 }
             }
+            .zIndex(1)
 
             Spacer()
             
