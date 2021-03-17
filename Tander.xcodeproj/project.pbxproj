@@ -15,6 +15,7 @@
 		D21FA3AD26021E9800A5D37F /* TopMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21FA3AC26021E9800A5D37F /* TopMenuView.swift */; };
 		D21FA3B026021EC700A5D37F /* BottomMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21FA3AF26021EC700A5D37F /* BottomMenuView.swift */; };
 		D21FA3B32602217D00A5D37F /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21FA3B22602217D00A5D37F /* CardView.swift */; };
+		D21FA3BF260225AD00A5D37F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21FA3BE260225AD00A5D37F /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		D21FA3AC26021E9800A5D37F /* TopMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMenuView.swift; sourceTree = "<group>"; };
 		D21FA3AF26021EC700A5D37F /* BottomMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomMenuView.swift; sourceTree = "<group>"; };
 		D21FA3B22602217D00A5D37F /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		D21FA3BE260225AD00A5D37F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +92,7 @@
 		D21FA3A52602198200A5D37F /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				D21FA3A6260219A800A5D37F /* HomeView.swift */,
+				D21FA3B62602246E00A5D37F /* Home */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -103,6 +105,15 @@
 				D21FA3AF26021EC700A5D37F /* BottomMenuView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		D21FA3B62602246E00A5D37F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D21FA3BE260225AD00A5D37F /* HomeViewModel.swift */,
+				D21FA3A6260219A800A5D37F /* HomeView.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +187,7 @@
 			files = (
 				D21FA3A7260219A800A5D37F /* HomeView.swift in Sources */,
 				D21FA3A2260217E200A5D37F /* Card.swift in Sources */,
+				D21FA3BF260225AD00A5D37F /* HomeViewModel.swift in Sources */,
 				D21FA3B026021EC700A5D37F /* BottomMenuView.swift in Sources */,
 				D21FA3912602174B00A5D37F /* TanderApp.swift in Sources */,
 				D21FA3B32602217D00A5D37F /* CardView.swift in Sources */,

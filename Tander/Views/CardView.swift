@@ -12,7 +12,7 @@ struct CardView: View {
     let cardGradient = Gradient(colors: [Color.black.opacity(0), Color.black.opacity(0.5)])
     
     var body: some View {
-        ZStack(alignment: .leading) {
+        ZStack(alignment: .topLeading) {
             Image(card.image)
                 .resizable()
             
@@ -36,9 +36,27 @@ struct CardView: View {
                 .foregroundColor(.white)
             }
             .padding()
+            
+            HStack {
+                Image("yes")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 150)
+                    .opacity(Double(card.xPosition / 10 - 1))
+                
+                Spacer()
+                
+                Image("nope")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 150)
+                    .opacity(Double(card.xPosition / 10 * -1 - 1))
+            }
         }
         .cornerRadius(10)
         .padding([.top, .horizontal])
+        .offset(x: card.xPosition, y: card.yPosition)
+        .rotationEffect(Angle.degrees(card.rotationAngle))
     }
 }
 
