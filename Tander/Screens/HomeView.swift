@@ -9,7 +9,21 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            TopMenuView()
+            
+            Spacer()
+            
+            ZStack {
+                ForEach(Card.cards.reversed()) { card in
+                    CardView(card: card)
+                }
+            }
+
+            Spacer()
+            
+            BottomMenuView()
+        }
     }
 }
 

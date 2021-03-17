@@ -12,6 +12,9 @@
 		D21FA3982602174E00A5D37F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D21FA3972602174E00A5D37F /* Preview Assets.xcassets */; };
 		D21FA3A2260217E200A5D37F /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21FA3A1260217E200A5D37F /* Card.swift */; };
 		D21FA3A7260219A800A5D37F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21FA3A6260219A800A5D37F /* HomeView.swift */; };
+		D21FA3AD26021E9800A5D37F /* TopMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21FA3AC26021E9800A5D37F /* TopMenuView.swift */; };
+		D21FA3B026021EC700A5D37F /* BottomMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21FA3AF26021EC700A5D37F /* BottomMenuView.swift */; };
+		D21FA3B32602217D00A5D37F /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21FA3B22602217D00A5D37F /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		D21FA3992602174E00A5D37F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D21FA3A1260217E200A5D37F /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		D21FA3A6260219A800A5D37F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		D21FA3AC26021E9800A5D37F /* TopMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMenuView.swift; sourceTree = "<group>"; };
+		D21FA3AF26021EC700A5D37F /* BottomMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomMenuView.swift; sourceTree = "<group>"; };
+		D21FA3B22602217D00A5D37F /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				D21FA3A0260217CC00A5D37F /* Models */,
+				D21FA3AB26021E8300A5D37F /* Views */,
 				D21FA3A52602198200A5D37F /* Screens */,
 				D21FA3902602174B00A5D37F /* TanderApp.swift */,
 				D21FA3942602174E00A5D37F /* Assets.xcassets */,
@@ -86,6 +93,16 @@
 				D21FA3A6260219A800A5D37F /* HomeView.swift */,
 			);
 			path = Screens;
+			sourceTree = "<group>";
+		};
+		D21FA3AB26021E8300A5D37F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D21FA3B22602217D00A5D37F /* CardView.swift */,
+				D21FA3AC26021E9800A5D37F /* TopMenuView.swift */,
+				D21FA3AF26021EC700A5D37F /* BottomMenuView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,7 +176,10 @@
 			files = (
 				D21FA3A7260219A800A5D37F /* HomeView.swift in Sources */,
 				D21FA3A2260217E200A5D37F /* Card.swift in Sources */,
+				D21FA3B026021EC700A5D37F /* BottomMenuView.swift in Sources */,
 				D21FA3912602174B00A5D37F /* TanderApp.swift in Sources */,
+				D21FA3B32602217D00A5D37F /* CardView.swift in Sources */,
+				D21FA3AD26021E9800A5D37F /* TopMenuView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,7 +320,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ufukcanli.Tander;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -322,7 +342,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ufukcanli.Tander;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
