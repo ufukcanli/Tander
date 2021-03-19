@@ -25,7 +25,7 @@ struct SettingsView: View {
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {
                     Button {
-                        viewModel.isShowing = false
+                        viewModel.dismissSettings()
                     } label: {
                         Text("Done")
                     }

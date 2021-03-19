@@ -9,11 +9,11 @@ import SwiftUI
 
 final class SettingsViewModel: ObservableObject {
     
+    @Binding private(set) var isShowing: Bool
+    
     @Published var currentIndex = 0
     var iconNames = [String?]()
-    
-    @Binding var isShowing: Bool
-    
+        
     init(isShowing: Binding<Bool>) {
         _isShowing = isShowing
             
@@ -47,5 +47,9 @@ final class SettingsViewModel: ObservableObject {
                 }
             }
         }
+    }
+    
+    func dismissSettings() {
+        isShowing = false
     }
 }
