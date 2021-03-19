@@ -12,7 +12,11 @@ final class SettingsViewModel: ObservableObject {
     @Published var currentIndex = 0
     var iconNames = [String?]()
     
-    init() {        
+    @Binding var isShowing: Bool
+    
+    init(isShowing: Binding<Bool>) {
+        _isShowing = isShowing
+            
         getAlternateIconNames()
         
         if let currentIcon = UIApplication.shared.alternateIconName {

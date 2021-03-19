@@ -40,7 +40,7 @@ struct HomeView: View {
             BottomMenuView(viewModel: viewModel)
         }
         .sheet(isPresented: $viewModel.isShowingSettings) {
-            SettingsView()
+            SettingsView(viewModel: SettingsViewModel(isShowing: $viewModel.isShowingSettings))
         }
     }
 }

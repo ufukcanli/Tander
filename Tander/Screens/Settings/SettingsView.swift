@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct SettingsView: View {
-    @Environment(\.presentationMode) var presentationMode
-    @StateObject private var viewModel = SettingsViewModel()
+    @ObservedObject var viewModel: SettingsViewModel
         
     var body: some View {
         NavigationView {
@@ -26,7 +25,7 @@ struct SettingsView: View {
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {
                     Button {
-                        presentationMode.wrappedValue.dismiss()
+                        viewModel.isShowing = false
                     } label: {
                         Text("Done")
                     }
@@ -39,6 +38,6 @@ struct SettingsView: View {
 
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
-        SettingsView()
+        SettingsView(viewModel: SettingsViewModel(isShowing: .constant(true)))
     }
 }
