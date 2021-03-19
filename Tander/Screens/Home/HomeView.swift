@@ -19,6 +19,7 @@ struct HomeView: View {
             ZStack {
                 ForEach(viewModel.cards) { card in
                     CardView(card: card)
+                        .shadow(color: Color.black.opacity(0.2), radius: 2)
                         .animation(.interpolatingSpring(stiffness: 180, damping: 100))
                         .transition(viewModel.removalTransition)
                         .gesture(
