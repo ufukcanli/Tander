@@ -8,12 +8,7 @@
 import SwiftUI
 
 struct TopMenuView: View {
-    
     @ObservedObject var viewModel: HomeViewModel
-
-    init(viewModel: HomeViewModel) {
-        _viewModel = ObservedObject(wrappedValue: viewModel)
-    }
         
     var body: some View {
         HStack {
