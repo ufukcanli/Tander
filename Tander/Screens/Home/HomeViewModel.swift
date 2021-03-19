@@ -9,10 +9,12 @@ import SwiftUI
 
 final class HomeViewModel: ObservableObject {
     
+    @Published var isShowingSettings = false
+    
     @Published private(set) var cards = Card.cards
     @Published private(set) var removalTransition = AnyTransition.trailingBottom
     
-    private let dragThreshold: CGFloat = 180.0
+    private let dragThreshold: CGFloat = 120.0
     
     func updatePositionOf(card: Card, using value: DragGesture.Value) {
         guard isTop(card: card) else { return }
@@ -63,5 +65,9 @@ final class HomeViewModel: ObservableObject {
             return false
         }
         return index == cards.count - 1
+    }
+    
+    func displaySettings() {
+        isShowingSettings = true
     }
 }

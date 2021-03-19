@@ -12,7 +12,7 @@ struct HomeView: View {
     
     var body: some View {
         VStack {
-            TopMenuView()
+            TopMenuView(viewModel: viewModel)
             
             Spacer()
             
@@ -37,6 +37,9 @@ struct HomeView: View {
             Spacer()
             
             BottomMenuView()
+        }
+        .sheet(isPresented: $viewModel.isShowingSettings) {
+            SettingsView()
         }
     }
 }
