@@ -67,6 +67,10 @@ final class HomeViewModel: ObservableObject {
         return index == cards.count - 1
     }
     
+    func refreshCards() {
+        cards = Card.cards
+    }
+    
     func displaySettings() {
         isShowingSettings = true
     }

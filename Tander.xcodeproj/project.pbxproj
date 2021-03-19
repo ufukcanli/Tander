@@ -129,11 +129,8 @@
 		D21FA3AB26021E8300A5D37F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D21FA3B22602217D00A5D37F /* CardView.swift */,
-				D21FA3AC26021E9800A5D37F /* TopMenuView.swift */,
-				D21FA3AF26021EC700A5D37F /* BottomMenuView.swift */,
-				D2C2A0812604E29100777D8F /* PickerLabelView.swift */,
-				D2C2A0862604E4D300777D8F /* PickerItemView.swift */,
+				D2C2A08A2604F53600777D8F /* Home */,
+				D2C2A08B2604F54200777D8F /* Settings */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -196,6 +193,25 @@
 				D21FA3C326023D0F00A5D37F /* Extensions */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		D2C2A08A2604F53600777D8F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D21FA3B22602217D00A5D37F /* CardView.swift */,
+				D21FA3AC26021E9800A5D37F /* TopMenuView.swift */,
+				D21FA3AF26021EC700A5D37F /* BottomMenuView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D2C2A08B2604F54200777D8F /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				D2C2A0812604E29100777D8F /* PickerLabelView.swift */,
+				D2C2A0862604E4D300777D8F /* PickerItemView.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

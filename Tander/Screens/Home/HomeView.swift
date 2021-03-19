@@ -36,7 +36,7 @@ struct HomeView: View {
 
             Spacer()
             
-            BottomMenuView()
+            BottomMenuView(viewModel: viewModel)
         }
         .sheet(isPresented: $viewModel.isShowingSettings) {
             SettingsView()

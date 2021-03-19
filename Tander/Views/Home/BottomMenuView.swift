@@ -8,9 +8,18 @@
 import SwiftUI
 
 struct BottomMenuView: View {
+    
+    @ObservedObject var viewModel: HomeViewModel
+    
+    init(viewModel: HomeViewModel) {
+        _viewModel = ObservedObject(wrappedValue: viewModel)
+    }
+    
     var body: some View {
         HStack(spacing: 0) {
-            Button(action: {}) {
+            Button {
+                viewModel.refreshCards()
+            } label: {
                 Image("refresh")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
@@ -51,6 +60,6 @@ struct BottomMenuView: View {
 
 struct BottomMenuView_Previews: PreviewProvider {
     static var previews: some View {
-        BottomMenuView()
+        BottomMenuView(viewModel: HomeViewModel())
     }
 }
